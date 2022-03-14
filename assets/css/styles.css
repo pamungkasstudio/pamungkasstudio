@@ -7,11 +7,11 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 152;
-  --first-color: hsl(var(--hue), 24%, 32%);
-  --first-color-alt: hsl(var(--hue), 24%, 28%);
-  --first-color-light: hsl(var(--hue), 24%, 66%);
-  --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  --hue: 228;
+  --first-color: hsl(var(--hue), 82%, 30%);
+  --first-color-alt: hsl(var(--hue), 82%, 26%);
+  --first-color-light: hsl(var(--hue), 82%, 66%);
+  --first-color-lighten: hsl(var(--hue), 82%, 92%);
   --title-color: hsl(var(--hue), 4%, 15%);
   --text-color: hsl(var(--hue), 4%, 35%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
