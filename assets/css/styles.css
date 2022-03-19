@@ -140,7 +140,8 @@ Color changes in some parts of
 the website, in dark theme 
 ==========*/
 
-.dark-theme .steps__bg,
+.dark-theme .steps__bg, 
+.dark-theme .package__bg,
 .dark-theme .questions{
   background-color: var(--first-color-dark);
 }
@@ -489,15 +490,12 @@ the website, in dark theme
 }
 
 /*=============== PRODUCTS ===============*/
-.product__description{
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
 
-.product__container{
+.products__container{
   padding: 3rem 0;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem 3rem;
+  grid-template-columns: 300px;
+  justify-content: center;
+  gap: 1.5rem 1rem;
 }
 
 .products__filters{
@@ -505,6 +503,22 @@ the website, in dark theme
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem 2rem;
   margin-bottom: 3.5rem;
+}
+
+.products__line{
+  position: relative;
+}
+
+.products__line::before{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  background-color: var(--text-color-light);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 
 .products__item{
@@ -521,18 +535,13 @@ the website, in dark theme
   font-size: var(--small-font-size);
 }
 
-.products__content{
-  grid-template-columns: 200px;
-  justify-content: center;
-}
-
 .products__card{
   background-color: var(--container-color);
   border-radius: .5rem;
 }
 
 .products__img{
-  width: 150px;
+  width: 300px;
   transition: .4s;
 }
 
@@ -575,6 +584,44 @@ the website, in dark theme
 .active-product .products__title{
   color: var(--title-color);
 }
+
+/*=============== PACKAGE ===============*/
+.package__bg{
+  background-color: var(--container-color);
+  padding: 3rem 2rem 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.package__title{
+  color: var(--text-color);
+}
+
+.package__container{
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.package__card{
+  position: relative;
+}
+
+.package__img{
+  width: fit-content;
+}
+
+.package__button{
+  border-radius: 20;
+  padding: .625rem;
+  display: inline-flex;
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: -1.25rem;
+  box-shadow: 0 4px 12px hsla(206, 4%, 4%, .2);
+}
+
+
 
 /*=============== QUESTIONS ===============*/
 .questions{
@@ -901,6 +948,13 @@ the website, in dark theme
     grid-template-columns: .6fr;
     justify-content: center;
   }
+
+  .package__bg{
+    padding: 2rem 1rem;
+  }
+  .package__card{
+    padding: 1.5rem;
+  }
 }
 
 /* For medium devices */
@@ -909,13 +963,15 @@ the website, in dark theme
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .product__description{
-    padding: 0 4rem;
-  }
-  .product__container{
-    grid-template-columns: repeat(2, 170px);
+  .products__container{
+    grid-template-columns: repeat(2, 300px);
     justify-content: center;
-    column-gap: 5rem;
+    padding-bottom: 3rem;
+    gap: 1.5rem;
+  }
+
+  .package__container{
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer__subscribe{
@@ -966,6 +1022,10 @@ the website, in dark theme
     top: 30%;
   }
 
+  .products__filters{
+    grid-template-columns: repeat(3, 200px);
+  }
+
   .questions__container{
     align-items: flex-start;
   }
@@ -979,7 +1039,7 @@ the website, in dark theme
 }
 
 /* For large devices */
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1040px){
   .container{
     margin-left: auto;
     margin-right: auto;
@@ -1017,23 +1077,45 @@ the website, in dark theme
     font-size: var(--normal-font-size);
   }
 
-  .product__description{
-    padding: 0 16rem;
-  }
-  .product__container{
+  .products__container{
     padding: 4rem 0;
-    grid-template-columns: repeat(3, 185px);
+    grid-template-columns: repeat(3, 300px);
     gap: 4rem 6rem;
   }
-  .product__img{
-    width: 160px;
+  .products__filters{
+    margin: 4rem 0 5.5rem;
+    column-gap: 4rem;
   }
-  .product__circle{
-    width: 110px;
-    height: 110px;
+  .products__card{
+    border-radius: .75rem;
   }
-  .product__title,
-  .product__price{
+  .products__img{
+    width: 300px;
+  }
+  .products__shape{
+    padding: 2rem 0;
+    border-radius: .75rem .75rem 0 0;
+  }
+  .products__data{
+    padding: 1rem 0 1.5rem 1.5rem;
+  }
+  .products__name{
+    font-size: var(--h3-font-size);
+  }
+  .products__button{
+    font-size: 1.5rem;
+    padding: .75rem;
+    right: 1.5rem;
+    top: -1.5rem;
+  }
+
+  .package__container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .package__bg{
+    padding: 3.5rem 2.5rem;
+  }
+  .package__card-title{
     font-size: var(--normal-font-size);
   }
 
